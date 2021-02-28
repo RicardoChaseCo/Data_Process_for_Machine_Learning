@@ -1,0 +1,27 @@
+#create
+R> mydata <- data.frame(person=c("Peter","Lois","Meg","Chris","Stewie"),
+                        age=c(42,40,17,14,1),
+												sex=factor(c("M","F","F","M","M")))
+R> mydata
+  person age sex
+1  Peter  42   M
+2   Lois  40   F
+3    Meg  17   F
+4  Chris  14   M
+5 Stewie   1   M
+
+#extract
+R> mydata[3:5,3]
+[1] F M M
+Levels: F M
+R> mydata$age [1]42 40 17 14 1
+R> mydata$age[2]
+[1] 40
+
+#size
+R> nrow(mydata)
+[1] 5
+R> ncol(mydata)
+[1] 3
+R> dim(mydata)
+[1] 5 3
