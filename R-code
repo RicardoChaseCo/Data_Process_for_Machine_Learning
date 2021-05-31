@@ -25,3 +25,5 @@ R> ncol(mydata)
 [1] 3
 R> dim(mydata)
 [1] 5 3
+
+R for
