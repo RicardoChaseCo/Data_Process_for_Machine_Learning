@@ -1,4 +1,4 @@
-# Data_Process_for_Machine_Learning
+# Data-Wrangling-in-R
 
 Notebook from Jim Liang's book(Get Started with Machine Learning)
 
