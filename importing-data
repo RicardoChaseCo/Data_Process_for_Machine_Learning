@@ -1,0 +1,19 @@
+#The data is imported and stored in dat
+library(tidyverse)
+dat <- read_csv("murders.csv")
+
+#You can get the full path of your working directory without writing out explicitly by using the getwd function
+wd <- getwd()
+
+#The readr library includes functions for reading data stored in text file spreadsheets into R
+library(readr)
+#We can open the file to take a look or use the function read_lines to look at a few lines
+#The following functions are available to read-in spreadsheets
+#read_table(txt), read_csv(csv)
+
+library(readxl)
+#readxl can read xls and xlsx type files in R
+
+#Another common place for data to reside is on the internet. When these data are in files, we can download them and then import them or even read them directly from the web
+url <- "https://raw.githubusercontent.com/rafalab/dslabs/master/inst/extdata/murders.csv"
+dat <- read_csv(url)
