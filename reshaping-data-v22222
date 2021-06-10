@@ -1,0 +1,15 @@
+
+library(tidyverse)
+library(dslabs)
+path <- system.file("extdata", package="dslabs")
+filename <- file.path(path, "fertility-two-countries-example.csv") 
+wide_data <- read_csv(filename)
+
+#One of the most used functions in the tidyr package is gather, which is useful for converting wide data into tidy data.
+new_tidy_data <- wide_data %>% gather(year, fertility, `1960`:`2015`)
+head(new_tidy_data)
+new_tidy_data <- wide_data %>%
+gather(year, fertility, -country, convert = TRUE)
+new_tidy_data %>% ggplot(aes(year, fertility, color = country)) + geom_point()
+
+#The spread function is basically the inverse of gather
